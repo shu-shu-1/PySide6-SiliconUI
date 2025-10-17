@@ -1,5 +1,5 @@
-from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtWidgets import QLineEdit
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtWidgets import QLineEdit
 
 from siui.components.widgets.abstracts.widget import SiWidget
 from siui.components.widgets.container import SiDenseHContainer
@@ -10,7 +10,7 @@ from siui.gui import SiFont
 
 
 class SiSimpleLineEdit(QLineEdit):
-    onFocus = pyqtSignal(bool)
+    onFocus = Signal(bool)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

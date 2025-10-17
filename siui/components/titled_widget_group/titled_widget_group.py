@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt
+from PySide6.QtCore import Qt
 
 from siui.components.widgets.container import SiDenseVContainer
 from siui.components.widgets.label import SiLabel
@@ -78,7 +78,7 @@ class SiTitledWidgetGroup(SiDenseVContainer):
             widget.resized.connect(self._on_child_resized)
         except:  # noqa: E722
             pass
-            # print(f"子控件 {widget} 似乎不具有正确形式的 resized 信号（pyqtSignal(list)）")
+            # print(f"子控件 {widget} 似乎不具有正确形式的 resized 信号（Signal(list)）")
 
     def _on_child_resized(self, _):
         self.adjustSize()

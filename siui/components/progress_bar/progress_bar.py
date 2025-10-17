@@ -1,13 +1,13 @@
 import numpy
-from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtGui import QColor, QPainter, QPen
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QColor, QPainter, QPen
 
 from siui.components.widgets import SiLabel
 from siui.core import ABCSiAnimation, SiColor, SiExpAnimation
 
 
 class SiProgressBar(SiLabel):
-    valueChanged = pyqtSignal(float)
+    valueChanged = Signal(float)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

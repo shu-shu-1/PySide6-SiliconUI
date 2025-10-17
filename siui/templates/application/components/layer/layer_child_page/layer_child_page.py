@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt, QTimer
+from PySide6.QtCore import Qt, QTimer
 
 from ..layer import SiLayer
 

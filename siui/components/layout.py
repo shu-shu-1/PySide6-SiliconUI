@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from PyQt5.QtCore import QEvent, QObject, QPoint, QRect, QSize, Qt, pyqtSignal
-from PyQt5.QtGui import QMouseEvent
-from PyQt5.QtWidgets import QLayout, QLayoutItem, QWidget, QWidgetItem
+from PySide6.QtCore import QEvent, QObject, QPoint, QRect, QSize, Qt, Signal
+from PySide6.QtGui import QMouseEvent
+from PySide6.QtWidgets import QLayout, QLayoutItem, QWidget, QWidgetItem
 
 from siui.core import SiQuickEffect
 from siui.core.animation import SiExpAnimationRefactor
@@ -34,9 +34,9 @@ class AnimatedWidgetItem(QWidgetItem):
 
 
 class DraggingEventFilter(QObject):
-    dropped = pyqtSignal()
-    dragged = pyqtSignal(QPoint)
-    pressed = pyqtSignal()
+    dropped = Signal()
+    dragged = Signal(QPoint)
+    pressed = Signal()
 
     def __init__(self, item: QLayoutItem, target: QWidget, trigger: QWidget):
         super().__init__()

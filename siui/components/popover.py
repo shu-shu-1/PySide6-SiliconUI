@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from PyQt5.QtCore import QDate, QEvent, QPoint, QPointF, QRectF, QSize, Qt, pyqtProperty, pyqtSignal
-from PyQt5.QtGui import QColor, QPainter, QPainterPath
-from PyQt5.QtWidgets import QButtonGroup, QLabel, QMenu, QStackedWidget, QWidget
+from PySide6.QtCore import QDate, QEvent, QPoint, QPointF, QRectF, QSize, Qt, Property, Signal
+from PySide6.QtGui import QColor, QPainter, QPainterPath
+from PySide6.QtWidgets import QButtonGroup, QLabel, QMenu, QStackedWidget, QWidget
 
 from siui.components.button import SiFlatButton, SiFlatButtonWithIndicator
 from siui.components.container import SiDenseContainer
@@ -245,8 +245,8 @@ class SiPopoverDatePicker(SiDenseContainer):
 
 
 class SiCalenderDateWidget(QWidget):
-    hovered = pyqtSignal(QWidget)
-    clicked = pyqtSignal(QWidget)
+    hovered = Signal(QWidget)
+    clicked = Signal(QWidget)
 
     class VisualState:
         Muted = 0
@@ -340,8 +340,8 @@ class AnimatedCalenderStyleData:
 
 
 class SiAnimatedCalender(SiDenseContainer):
-    pageChanged = pyqtSignal(int)
-    selectedDateChanged = pyqtSignal(QDate)
+    pageChanged = Signal(int)
+    selectedDateChanged = Signal(QDate)
     # focus
 
     class Property:
@@ -388,7 +388,7 @@ class SiAnimatedCalender(SiDenseContainer):
         self.layout().setSpacing(0)
         self.layout().removeWidget(self.stretchWidget())
 
-    @pyqtProperty(QPointF)
+    @Property(QPointF)
     def indicatorPos(self):
         return self._indi_pos
 
@@ -397,7 +397,7 @@ class SiAnimatedCalender(SiDenseContainer):
         self._indi_pos = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def indicatorColor(self):
         return self._indi_color
 
@@ -406,7 +406,7 @@ class SiAnimatedCalender(SiDenseContainer):
         self._indi_color = value
         self.update()
 
-    @pyqtProperty(QPointF)
+    @Property(QPointF)
     def cursorIndicatorPos(self):
         return self._cur_indi_pos
 
@@ -415,7 +415,7 @@ class SiAnimatedCalender(SiDenseContainer):
         self._cur_indi_pos = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def cursorIndicatorColor(self):
         return self._cur_indi_color
 

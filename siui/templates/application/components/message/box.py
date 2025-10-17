@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt, QTimer, pyqtSignal
+from PySide6.QtCore import Qt, QTimer, Signal
 
 from siui.components.widgets.label import SiLabel, SiSvgLabel
 from siui.components.widgets.button import SiSimpleButton
@@ -10,7 +10,7 @@ from siui.core import Si
 
 
 class SiSideMessageContent(SiWidget):
-    clicked = pyqtSignal()
+    clicked = Signal()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -118,7 +118,7 @@ class SiSideMessageContent(SiWidget):
 
 
 class SiSideMessageBox(SiWidget):
-    clicked = pyqtSignal()
+    clicked = Signal()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

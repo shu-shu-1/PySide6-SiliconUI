@@ -1,8 +1,8 @@
 import icons
 from components.page_about import About
 from components.page_homepage import Homepage
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QDesktopWidget
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QDesktopWidget
 
 import siui
 from siui.core import SiColor, SiGlobal

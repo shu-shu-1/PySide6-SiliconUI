@@ -1,8 +1,8 @@
 import datetime
 import time
 
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QCursor, QFont
+from PySide6.QtCore import Qt, QTimer
+from PySide6.QtGui import QCursor, QFont
 
 from siui.components import SiDenseHContainer, SiDenseVContainer, SiLabel, SiWidget
 from siui.core import Si, SiColor

@@ -1,7 +1,7 @@
 
-from PyQt5.QtCore import QTimer, QRect, QRectF, Qt, pyqtProperty, pyqtSignal
-from PyQt5.QtGui import QColor, QPainter, QPainterPath
-from PyQt5.QtWidgets import QProgressBar
+from PySide6.QtCore import QTimer, QRect, QRectF, Qt, Property, Signal
+from PySide6.QtGui import QColor, QPainter, QPainterPath
+from PySide6.QtWidgets import QProgressBar
 
 from siui.core import createPainter
 from siui.core.animation import SiExpAnimationRefactor
@@ -21,7 +21,7 @@ class ProgressBarStyleData:
 
 
 class SiProgressBarRefactor(QProgressBar):
-    stateChanged = pyqtSignal(int)
+    stateChanged = Signal(int)
 
     class State:
         Loading = 0
@@ -75,7 +75,7 @@ class SiProgressBarRefactor(QProgressBar):
         self._manager = WidgetToolTipRedirectEventFilter()
         self.installEventFilter(self._manager)
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def progressColor(self):
         return self._prog_color
 
@@ -84,7 +84,7 @@ class SiProgressBarRefactor(QProgressBar):
         self._prog_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def progressValue(self):
         return self._prog_value
 
@@ -93,7 +93,7 @@ class SiProgressBarRefactor(QProgressBar):
         self._prog_value = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def flashColor(self):
         return self._flash_color
 

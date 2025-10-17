@@ -1,11 +1,11 @@
-from PyQt5.QtCore import pyqtSignal
+from PySide6.QtCore import Signal
 
 from siui.components.widgets.abstracts.widget import SiWidget
 
 
 class ABCSiNavigationBar(SiWidget):
     """ 抽象导航栏 """
-    indexChanged = pyqtSignal(int)
+    indexChanged = Signal(int)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

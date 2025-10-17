@@ -1,7 +1,7 @@
 import time
 
-from PyQt5.QtCore import QEvent, QObject
-from PyQt5.QtWidgets import QWidget
+from PySide6.QtCore import QEvent, QObject
+from PySide6.QtWidgets import QWidget
 
 from siui.components.tooltip import ToolTipWindow
 from siui.core import SiGlobal

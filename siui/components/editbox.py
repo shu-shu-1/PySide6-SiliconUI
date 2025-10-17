@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import difflib
 
-from PyQt5.QtCore import QMargins, QObject, QPoint, QPointF, QRect, QRectF, QSize, QSizeF, Qt, pyqtProperty
-from PyQt5.QtGui import (
+from PySide6.QtCore import QMargins, QObject, QPoint, QPointF, QRect, QRectF, QSize, QSizeF, Qt, Property
+from PySide6.QtGui import (
     QColor,
     QDoubleValidator,
     QFont,
@@ -13,7 +13,7 @@ from PyQt5.QtGui import (
     QPainterPath,
     QTextOption,
 )
-from PyQt5.QtWidgets import QAction, QApplication, QLineEdit, QWidget
+from PySide6.QtWidgets import QAction, QApplication, QLineEdit, QWidget
 
 from siui.components.button import SiFlatButton
 from siui.components.container import SiBoxContainer, SiDenseContainer
@@ -125,7 +125,7 @@ class SiCapsuleLineEdit(QLineEdit):
 
     # region Property
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def titleColor(self):
         return self._title_color
 
@@ -134,7 +134,7 @@ class SiCapsuleLineEdit(QLineEdit):
         self._title_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def textBackgroundWidthProgress(self):
         return self._text_bg_width_progress
 
@@ -143,7 +143,7 @@ class SiCapsuleLineEdit(QLineEdit):
         self._text_bg_width_progress = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def textIndicatorColor(self):
         return self._text_indi_color
 
@@ -152,7 +152,7 @@ class SiCapsuleLineEdit(QLineEdit):
         self._text_indi_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def textIndicatorWidth(self):
         return self._text_indi_width
 
@@ -455,7 +455,7 @@ class AnimatedCharObject(QObject):
         self.position_ani = SiExpAnimationRefactor(self, self.Property.TextPosition)
         self.position_ani.init(0, 0.05, self._text_pos_p, self._text_pos_p)
 
-    @pyqtProperty(float)
+    @Property(float)
     def textOpacity(self):
         return self._text_opacity
 
@@ -463,7 +463,7 @@ class AnimatedCharObject(QObject):
     def textOpacity(self, value: float):
         self._text_opacity = value
 
-    @pyqtProperty(float)
+    @Property(float)
     def textPosition(self):
         return self._text_pos_p
 
@@ -520,7 +520,7 @@ class SiCustomLineEdit(QLineEdit):
         self.textChanged.connect(self._onTextChanged)
         self.cursorPositionChanged.connect(self._onCursorPositionChanged)
 
-    @pyqtProperty(list)
+    @Property(list)
     def charProgress(self):
         return self._char_progress
 
@@ -529,7 +529,7 @@ class SiCustomLineEdit(QLineEdit):
         self._char_progress = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def cursorX(self):
         return self._cursor_x
 
@@ -683,7 +683,7 @@ class SiLabeledLineEdit(QLineEdit):
             "}"
         )
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def titleColor(self):
         return self._title_color
 
@@ -692,7 +692,7 @@ class SiLabeledLineEdit(QLineEdit):
         self._title_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def textBackgroundWidthProgress(self):
         return self._text_bg_width_progress
 
@@ -701,7 +701,7 @@ class SiLabeledLineEdit(QLineEdit):
         self._text_bg_width_progress = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def textIndicatorColor(self):
         return self._text_indi_color
 
@@ -710,7 +710,7 @@ class SiLabeledLineEdit(QLineEdit):
         self._text_indi_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def textIndicatorWidth(self):
         return self._text_indi_width
 

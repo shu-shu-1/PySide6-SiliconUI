@@ -2,11 +2,11 @@
 <p align="center">  
   
   <a href="#">
-    <img src="https://github.com/ChinaIceF/PyQt-SiliconUI/blob/main/assets/readme/silicon_main.png?raw=true" alt="Logo"  >
+    <img src="https://github.com/ChinaIceF/PySide6-SiliconUI/blob/main/assets/readme/silicon_main.png?raw=true" alt="Logo"  >
   </a>
   
-  <h2 align="center">PyQt-SiliconUI</h2>
-  <p align="center">基于 PyQt5 的UI框架，灵动、优雅而轻便</p>
+  <h2 align="center">PySide6-SiliconUI</h2>
+  <p align="center">基于 PySide6 的UI框架，灵动、优雅而轻便</p>
 
 <p align="center">
     <a href="../README.md">English</a> | 简体中文
@@ -21,13 +21,13 @@ python setup.py install
 
 
 ## 运行示例程序
-运行 `examples/Gallery for siui/start.py` 来体验 PyQt-SiliconUI 提供的控件、组件和框架
+运行 `examples/Gallery for siui/start.py` 来体验 PySide6-SiliconUI 提供的控件、组件和框架
 
 ### 重构计划
 控件的重构即将完成。你可以在 Gallery 的 “重构控件” 页面试用。
 
- **请注意**，如果您近期想尝试 PyQt-SiliconUI 编写项目，**非常不推荐您使用除了 “重构控件” 以外的控件**。旧控件包含大量缺陷，正在逐步被重构控件取代。另外，应用模版也在重构计划内。将会在控件、组件的重构基本完成后着手实现。由于旧的应用模板存在大量的代码漏洞，功能的实现也非常丑陋，
-**在应用模版重构完成前，不建议您正式使用 PyQt-SiliconUI 的应用模版搭建项目**
+ **请注意**，如果您近期想尝试 PySide6-SiliconUI 编写项目，**非常不推荐您使用除了 “重构控件” 以外的控件**。旧控件包含大量缺陷，正在逐步被重构控件取代。另外，应用模版也在重构计划内。将会在控件、组件的重构基本完成后着手实现。由于旧的应用模板存在大量的代码漏洞，功能的实现也非常丑陋，
+**在应用模版重构完成前，不建议您正式使用 PySide6-SiliconUI 的应用模版搭建项目**
 
 ### 重构模块内容解释
 以下列出了一些正在积极维护的模块。完全完成这些模块的实现后，将从仓库中移除旧的模块 / 包。
@@ -51,12 +51,12 @@ python setup.py install
 
 
 ## 另请参阅
-一些基于 PyQt-SiliconUI 编写的项目:
+一些基于 PySide6-SiliconUI 编写的项目:
 * [My-TODOs](https://github.com/ChinaIceF/My-TODOs) - 简洁轻便的跨平台桌面待办小工具
 
 
 ## 许可证
-PyQt-SiliconUI 使用 [GPLv3](../LICENSE) 许可证
+PySide6-SiliconUI 使用 [GPLv3](../LICENSE) 许可证
 
 版权所有 © 2024-2025 by ChinaIceF.
 

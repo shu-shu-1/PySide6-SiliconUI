@@ -1,6 +1,6 @@
 import time
 
-from PyQt5.QtCore import Qt
+from PySide6.QtCore import Qt
 
 from siui.components import SiTitledWidgetGroup, SiPixLabel, SiDenseVContainer
 from siui.components.page import SiPage

@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import math
 
-from PyQt5.QtCore import QEvent, QPoint, QPointF, QRect, QRectF, QSize, Qt, QTimer, pyqtProperty, pyqtSignal
-from PyQt5.QtGui import QColor, QFont, QPainter, QPainterPath, QPen, QPixmap, QValidator
-from PyQt5.QtWidgets import (
+from PySide6.QtCore import QEvent, QPoint, QPointF, QRect, QRectF, QSize, Qt, QTimer, Property, Signal
+from PySide6.QtGui import QColor, QFont, QPainter, QPainterPath, QPen, QPixmap, QValidator
+from PySide6.QtWidgets import (
     QAbstractSlider,
     QAbstractSpinBox,
     QBoxLayout,
@@ -70,7 +70,7 @@ class SiSlider(QAbstractSlider):
         self.valueChanged.connect(self._onValueChanged)
         self.rangeChanged.connect(self._onRangeChanged)
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def thumbColor(self):
         return self._thumb_color
 
@@ -79,7 +79,7 @@ class SiSlider(QAbstractSlider):
         self._thumb_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def trackProgress(self):
         return self._track_progress
 
@@ -360,7 +360,7 @@ class SiCoordinatePicker2D(QWidget):
         # self.slider_y.style_data.thumb_idle_color = QColor("#eaa9c4")
         # self.slider_y.style_data.track_color = QColor("#b96f98")
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def thumbColor(self):
         return self._thumb_color
 
@@ -369,7 +369,7 @@ class SiCoordinatePicker2D(QWidget):
         self._thumb_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def progressX(self):
         return self._progress_x
 
@@ -378,7 +378,7 @@ class SiCoordinatePicker2D(QWidget):
         self._progress_x = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def progressY(self):
         return self._progress_y
 
@@ -387,7 +387,7 @@ class SiCoordinatePicker2D(QWidget):
         self._progress_y = value
         self.update()
 
-    @pyqtProperty(QRectF)
+    @Property(QRectF)
     def indicatorRect(self):
         return self._indicator_rect
 
@@ -612,7 +612,7 @@ class SiCoordinatePicker3D(SiCoordinatePicker2D):
 
         self.slider_z.valueChanged.connect(self._onSliderZValueChanged)
 
-    @pyqtProperty(float)
+    @Property(float)
     def progressZ(self):
         return self._progress_z
 
@@ -738,10 +738,10 @@ class SiCoordinatePicker3D(SiCoordinatePicker2D):
 
 
 class SiWheelSpinBox(QSpinBox):
-    limitReached = pyqtSignal(float)
-    carried = pyqtSignal(int)
-    increased = pyqtSignal()
-    decreased = pyqtSignal()
+    limitReached = Signal(float)
+    carried = Signal(int)
+    increased = Signal()
+    decreased = Signal()
 
     def wheelEvent(self, e):
         super().wheelEvent(e)
@@ -777,9 +777,9 @@ class SiWheelSpinBox(QSpinBox):
 
 class SiWeekdaySpinBox(QSpinBox):
     WEEKDAYS = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
-    limitReached = pyqtSignal(float)
-    increased = pyqtSignal()
-    decreased = pyqtSignal()
+    limitReached = Signal(float)
+    increased = Signal()
+    decreased = Signal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -1101,7 +1101,7 @@ class SiScrollBar(QScrollBar):
         self.valueChanged.connect(self._onValueChanged)
         self.rangeChanged.connect(self._onRangeChanged)
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def thumbColor(self):
         return self._thumb_color
 
@@ -1110,7 +1110,7 @@ class SiScrollBar(QScrollBar):
         self._thumb_color = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def trackProgress(self):
         return self._track_progress
 
@@ -1119,7 +1119,7 @@ class SiScrollBar(QScrollBar):
         self._track_progress = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def colorOpacity(self):
         return self._color_opacity
 
@@ -1345,7 +1345,7 @@ class SiScrollAreaRefactor(QScrollArea):
         self.pileScrollTimer.setSingleShot(True)
         self.pileScrollTimer.timeout.connect(self._onPileScrollTriggered)
 
-    @pyqtProperty(QPointF)
+    @Property(QPointF)
     def contentsPos(self):
         return self._contents_visual_pos
 

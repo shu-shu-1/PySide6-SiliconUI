@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import qApp
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import qApp
 
 from siui.core.token import FontStyle, GlobalFont, GlobalFontSize, GlobalFontWeight
 

@@ -1,6 +1,6 @@
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QFont
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QFont
 
 from siui.components import SiPixLabel
 from siui.components.option_card import SiOptionCardLinear, SiOptionCardPlane

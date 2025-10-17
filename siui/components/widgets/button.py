@@ -1,5 +1,5 @@
-from PyQt5.QtCore import QPoint, Qt, pyqtSignal
-from PyQt5.QtWidgets import QAbstractButton
+from PySide6.QtCore import QPoint, Qt, Signal
+from PySide6.QtWidgets import QAbstractButton
 
 from siui.components.widgets.abstracts import ABCButton, ABCPushButton, ABCToggleButton, LongPressThread
 from siui.components.widgets.label import SiIconLabel, SiLabel, SiSvgLabel
@@ -74,7 +74,7 @@ class SiLongPressButton(ABCPushButton):
     需要持续长按一段时间才能触发点击事件的按钮，可以设置文字、图标或是兼有\n
     被绑定部件是一个 SiIconLabel，需要使用 attachment 方法来访问它
     """
-    longPressed = pyqtSignal()
+    longPressed = Signal()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -191,7 +191,7 @@ class SiRadioButton(SiLabel):
     """
     单选组件，提供一个单选按钮和一个文字标签，会自动设置默认大小
     """
-    toggled = pyqtSignal(bool)
+    toggled = Signal(bool)
 
     def __init__(self, parent):
         super().__init__(parent)
@@ -295,7 +295,7 @@ class SiCheckBox(SiLabel):
     """
     多选组件，提供一个多选按钮和一个文字标签
     """
-    toggled = pyqtSignal(bool)
+    toggled = Signal(bool)
 
     def __init__(self, parent):
         super().__init__(parent)

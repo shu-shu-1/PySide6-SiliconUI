@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from PyQt5.QtCore import QEvent, QMargins, QObject, QPoint, QRect, QRectF, QSize, Qt
-from PyQt5.QtGui import QColor, QIcon, QKeySequence, QMouseEvent, QPainter, QPainterPath
-from PyQt5.QtWidgets import QAction, QActionGroup, QComboBox, QHBoxLayout, QLabel, QSpacerItem, QWidget
+from PySide6.QtCore import QEvent, QMargins, QObject, QPoint, QRect, QRectF, QSize, Qt
+from PySide6.QtGui import QColor, QIcon, QKeySequence, QMouseEvent, QPainter, QPainterPath
+from PySide6.QtWidgets import QAction, QActionGroup, QComboBox, QHBoxLayout, QLabel, QSpacerItem, QWidget
 
 from siui.components.button import SiFlatButton, SiTransparentButton
 from siui.components.editbox import SiCapsuleLineEdit

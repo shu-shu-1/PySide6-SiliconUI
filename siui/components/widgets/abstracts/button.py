@@ -1,8 +1,8 @@
 import time
 
 import numpy
-from PyQt5.QtCore import QThread, pyqtSignal, QTimer
-from PyQt5.QtWidgets import QPushButton
+from PySide6.QtCore import QThread, Signal, QTimer
+from PySide6.QtWidgets import QPushButton
 
 from siui.components.widgets.abstracts.widget import SiWidget
 from siui.components.widgets.label import SiLabel
@@ -260,8 +260,8 @@ class LongPressThread(QThread):
     """
     长按按钮的线程，用于处理长按计时、信号触发和动画
     """
-    ticked = pyqtSignal(float)
-    holdTimeout = pyqtSignal()
+    ticked = Signal(float)
+    holdTimeout = Signal()
 
     def __init__(self, parent):
         super().__init__(parent)
