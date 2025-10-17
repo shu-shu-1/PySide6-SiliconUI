@@ -19,7 +19,17 @@ Clone this repository and run the following command in your terminal:
 python setup.py install
 ```
 
+Or install dependencies with pip:
+
+```cmd
+pip install PySide6>=6.0.0 numpy pyperclip python-dateutil
+```
+
 > ⚠️ This project is still under active development. It is **not yet available on PyPi**, but will be in the future.
+
+## PySide6 Migration
+
+This library has been migrated from PyQt5 to PySide6. For migration details and compatibility information, see the [PySide6 Migration Guide](docs/PYSIDE6_MIGRATION.md).
 
 
 ## Run the Example Gallery

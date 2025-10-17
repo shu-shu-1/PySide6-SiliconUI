@@ -17,7 +17,18 @@
 ```cmd
 python setup.py install
 ```
+
+或使用 pip 安装依赖项：
+
+```cmd
+pip install PySide6>=6.0.0 numpy pyperclip python-dateutil
+```
+
 > ⚠️ 由于本项目还在积极开发中，在发布正式版本前不能在 PyPi 上安装，敬请期待。
+
+## PySide6 迁移
+
+本库已从 PyQt5 迁移到 PySide6。有关迁移详细信息和兼容性信息，请参阅 [PySide6 迁移指南](PYSIDE6_MIGRATION_zh.md)。
 
 
 ## 运行示例程序
