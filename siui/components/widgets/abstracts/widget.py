@@ -1,8 +1,8 @@
 import os
 
-from PyQt5.QtCore import QPoint, QRect, QRectF, Qt, pyqtSignal
-from PyQt5.QtGui import QPainter, QPixmap
-from PyQt5.QtWidgets import QWidget
+from PySide6.QtCore import QPoint, QRect, QRectF, Qt, Signal
+from PySide6.QtGui import QPainter, QPixmap
+from PySide6.QtWidgets import QWidget
 
 from siui.core import Si, SiAnimationGroup, SiColor, SiExpAnimation, SiGlobal
 from siui.gui.color_group import SiColorGroup
@@ -10,9 +10,9 @@ from siui.gui.color_group import SiColorGroup
 
 # 2024.7.3 添加动画控件
 class SiWidget(QWidget):
-    moved = pyqtSignal(object)
-    resized = pyqtSignal(object)
-    opacityChanged = pyqtSignal(float)
+    moved = Signal(object)
+    resized = Signal(object)
+    opacityChanged = Signal(float)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

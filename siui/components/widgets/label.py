@@ -1,6 +1,6 @@
-from PyQt5.QtCore import QPoint, Qt, pyqtSignal
-from PyQt5.QtGui import QPainter, QPainterPath, QPixmap
-from PyQt5.QtSvg import QSvgWidget
+from PySide6.QtCore import QPoint, Qt, Signal
+from PySide6.QtGui import QPainter, QPainterPath, QPixmap
+from PySide6.QtSvg import QSvgWidget
 
 from siui.components.widgets.abstracts.label import ABCAnimatedLabel
 from siui.core import GlobalFont, Si, SiColor, SiQuickAlignmentManager
@@ -218,7 +218,7 @@ class SiDraggableLabel(SiLabel):
     """
     为拖动事件提供支持的标签
     """
-    dragged = pyqtSignal(object)
+    dragged = Signal(object)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

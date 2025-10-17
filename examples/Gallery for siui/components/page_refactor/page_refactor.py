@@ -1,9 +1,9 @@
 import random
 from contextlib import contextmanager
 
-from PyQt5.QtCore import QPoint, QPointF, Qt
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QBoxLayout, QButtonGroup, QLabel, QSizePolicy, QWidget
+from PySide6.QtCore import QPoint, QPointF, Qt
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QBoxLayout, QButtonGroup, QLabel, QSizePolicy, QWidget
 
 from siui.components import SiDenseHContainer, SiDenseVContainer, SiTitledWidgetGroup
 from siui.components.button import (
@@ -588,7 +588,7 @@ class RefactoredWidgets(SiPage):
             self.linear_edit_box3.resize(560, 36)
             self.linear_edit_box3.setTitleWidthMode(SiCapsuleLineEdit.TitleWidthMode.Ratio)
             self.linear_edit_box3.setTitle("Description")
-            self.linear_edit_box3.setText("A powerful and artistic UI library based on PyQt5")
+            self.linear_edit_box3.setText("A powerful and artistic UI library based on PySide6")
 
             self.check_button = SiFlatButton(self)
             self.check_button.setText("确定")

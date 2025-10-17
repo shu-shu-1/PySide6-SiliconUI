@@ -1,6 +1,6 @@
 
-from PyQt5.QtCore import QPoint, pyqtSignal, QEvent
-from PyQt5.QtWidgets import QLabel
+from PySide6.QtCore import QPoint, Signal, QEvent
+from PySide6.QtWidgets import QLabel
 
 from siui.core import Si, SiAnimationGroup, SiColor, SiExpAnimation, SiGlobal, SiQuickEffect
 from siui.gui.color_group import SiColorGroup
@@ -8,9 +8,9 @@ from siui.gui.color_group import SiColorGroup
 
 # 2024.7.2 添加动画支持标签
 class ABCAnimatedLabel(QLabel):
-    moved = pyqtSignal(object)
-    resized = pyqtSignal(object)
-    opacityChanged = pyqtSignal(float)
+    moved = Signal(object)
+    resized = Signal(object)
+    opacityChanged = Signal(float)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

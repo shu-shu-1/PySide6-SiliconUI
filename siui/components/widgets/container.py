@@ -1,9 +1,9 @@
 import random
 from typing import Union
 
-from PyQt5.Qt import QColor
-from PyQt5.QtCore import Qt, QTimer, QSize
-from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QWidget
+from PySide6.QtGui import QColor
+from PySide6.QtCore import Qt, QTimer, QSize
+from PySide6.QtWidgets import QGraphicsDropShadowEffect, QWidget
 
 from siui.components.widgets.abstracts.container import ABCSiDividedContainer
 from siui.components.widgets.abstracts.widget import SiWidget

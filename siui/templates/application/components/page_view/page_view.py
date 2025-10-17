@@ -1,4 +1,4 @@
-from PyQt5.QtCore import pyqtSignal, Qt
+from PySide6.QtCore import Signal, Qt
 
 from siui.core import SiGlobal
 from siui.components.widgets import SiLabel, SiToggleButton
@@ -8,7 +8,7 @@ from siui.core import SiColor
 
 
 class PageButton(SiToggleButton):
-    activated = pyqtSignal()
+    activated = Signal()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

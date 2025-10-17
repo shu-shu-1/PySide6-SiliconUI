@@ -1,8 +1,8 @@
 from typing import List
 
-from PyQt5.QtCore import QPointF, QRectF, Qt, pyqtProperty
-from PyQt5.QtGui import QPainter, QTransform, QWheelEvent
-from PyQt5.QtWidgets import QGraphicsProxyWidget, QGraphicsScene, QGraphicsView, QWidget
+from PySide6.QtCore import QPointF, QRectF, Qt, Property
+from PySide6.QtGui import QPainter, QTransform, QWheelEvent
+from PySide6.QtWidgets import QGraphicsProxyWidget, QGraphicsScene, QGraphicsView, QWidget
 
 from siui.core.animation import SiExpAnimationRefactor
 from siui.typing import T_WidgetParent
@@ -48,7 +48,7 @@ class SiAnimatedTransformGraphicProxyWidget(QGraphicsProxyWidget):
 
         self.setAcceptHoverEvents(True)
 
-    @pyqtProperty(QPointF)
+    @Property(QPointF)
     def center(self):
         return self._center
 
@@ -57,7 +57,7 @@ class SiAnimatedTransformGraphicProxyWidget(QGraphicsProxyWidget):
         self._center = value
         self.updateTransform()
 
-    @pyqtProperty(QPointF)
+    @Property(QPointF)
     def translate(self):
         return self._translate
 
@@ -66,7 +66,7 @@ class SiAnimatedTransformGraphicProxyWidget(QGraphicsProxyWidget):
         self._translate = value
         self.updateTransform()
 
-    @pyqtProperty(float)
+    @Property(float)
     def scale(self):
         return self._scale
 
@@ -75,7 +75,7 @@ class SiAnimatedTransformGraphicProxyWidget(QGraphicsProxyWidget):
         self._scale = value
         self.updateTransform()
 
-    @pyqtProperty(float)
+    @Property(float)
     def xRotate(self):
         return self._x_rotate
 
@@ -84,7 +84,7 @@ class SiAnimatedTransformGraphicProxyWidget(QGraphicsProxyWidget):
         self._x_rotate = value
         self.updateTransform()
 
-    @pyqtProperty(float)
+    @Property(float)
     def yRotate(self):
         return self._y_rotate
 
@@ -93,7 +93,7 @@ class SiAnimatedTransformGraphicProxyWidget(QGraphicsProxyWidget):
         self._y_rotate = value
         self.updateTransform()
 
-    @pyqtProperty(float)
+    @Property(float)
     def zRotate(self):
         return self._z_rotate
 

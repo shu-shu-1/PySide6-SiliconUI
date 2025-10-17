@@ -1,6 +1,6 @@
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QFont
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QFont
 
 from siui.components import SiPixLabel
 from siui.components.option_card import SiOptionCardLinear, SiOptionCardPlane
@@ -60,7 +60,7 @@ class ExampleHomepage(SiPage):
         self.subtitle = SiLabel(self.head_area)
         self.subtitle.setGeometry(64, 72, 500, 48)
         self.subtitle.setAlignment(Qt.AlignVCenter | Qt.AlignLeft)
-        self.subtitle.setText("A powerful and artistic UI library based on PyQt5")
+        self.subtitle.setText("A powerful and artistic UI library based on PySide6")
         self.subtitle.setStyleSheet("color: {}".format(SiColor.trans(SiGlobal.siui.colors["TEXT_A"], 0.9)))
         self.subtitle.setFont(SiFont.tokenized(GlobalFont.S_MEDIUM))
 

@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton
 
 from SiliconUI.SiButton import SiButton, SiButtonHoldtoConfirm
 from SiliconUI.SiLayout import SiLayoutV

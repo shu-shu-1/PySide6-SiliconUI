@@ -4,9 +4,9 @@ import math
 import warnings
 
 import numpy
-from PyQt5.QtCore import QEvent, QPointF, QRect, QRectF, QSize, Qt, pyqtProperty
-from PyQt5.QtGui import QColor, QPainter, QPainterPath, QPaintEvent, QPixmap
-from PyQt5.QtWidgets import QLabel, QWidget
+from PySide6.QtCore import QEvent, QPointF, QRect, QRectF, QSize, Qt, Property
+from PySide6.QtGui import QColor, QPainter, QPainterPath, QPaintEvent, QPixmap
+from PySide6.QtWidgets import QLabel, QWidget
 
 from siui.core import SiColor, SiGlobal, createPainter
 from siui.core.animation import SiExpAnimationRefactor
@@ -117,7 +117,7 @@ class SiAnimatedColorWidget(QWidget):
         self.color_ani = SiExpAnimationRefactor(self, self.Property.BackgroundColor)
         self.color_ani.init(1 / 8, 0.01, self._background_color, self._background_color)
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def backgroundColor(self):
         return self._background_color
 
@@ -387,7 +387,7 @@ class SiLinearIndicator(QWidget):
         self.color_ani = SiExpAnimationRefactor(self, self.Property.Color)
         self.color_ani.init(1/8, 0.0001, self._color, self._color)
 
-    @pyqtProperty(float)
+    @Property(float)
     def visualWidth(self):
         return self._visual_width
 
@@ -396,7 +396,7 @@ class SiLinearIndicator(QWidget):
         self._visual_width = value
         self.update()
 
-    @pyqtProperty(float)
+    @Property(float)
     def visualHeight(self):
         return self._visual_height
 
@@ -405,7 +405,7 @@ class SiLinearIndicator(QWidget):
         self._visual_height = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def color(self):
         return self._color
 
@@ -522,7 +522,7 @@ class SiLinearPartitionIndicator(SiLinearIndicator):
         self.hl_rect_ani = SiExpAnimationRefactor(self, self.Property.HighlightRect)
         self.hl_rect_ani.init(1/4, 0.0001, self._hl_rect, self._hl_rect)
 
-    @pyqtProperty(QRectF)
+    @Property(QRectF)
     def highlightRect(self):
         return self._hl_rect
 

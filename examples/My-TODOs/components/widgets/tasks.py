@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QFont
+from PySide6.QtGui import QFont
 
 from siui.components import SiLabel, SiWidget
 from siui.core import SiColor

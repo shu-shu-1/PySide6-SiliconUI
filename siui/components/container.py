@@ -3,9 +3,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import overload
 
-from PyQt5.QtCore import QRectF, QSize, Qt
-from PyQt5.QtGui import QColor, QPainter, QPainterPath, QPixmap
-from PyQt5.QtWidgets import QBoxLayout, QLabel, QWidget, QSizePolicy
+from PySide6.QtCore import QRectF, QSize, Qt
+from PySide6.QtGui import QColor, QPainter, QPainterPath, QPixmap
+from PySide6.QtWidgets import QBoxLayout, QLabel, QWidget, QSizePolicy
 
 from siui.components.label import SiRoundPixmapWidget
 from siui.core import GlobalFont, createPainter

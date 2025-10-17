@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from PyQt5.QtCore import QEvent, QLineF, QPoint, QPointF, QRect, QRectF, Qt, pyqtProperty
-from PyQt5.QtGui import QColor, QPainter, QPainterPath, QPen, QPixmap
-from PyQt5.QtWidgets import QWidget
+from PySide6.QtCore import QEvent, QLineF, QPoint, QPointF, QRect, QRectF, Qt, Property
+from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen, QPixmap
+from PySide6.QtWidgets import QWidget
 
 from siui.core import createPainter, hideToolTip, isTooltipShown, showToolTip
 from siui.core.animation import SiExpAnimationRefactor
@@ -64,7 +64,7 @@ class SiTrendChart(QWidget):
         self.indicator_color_ani = SiExpAnimationRefactor(self, self.Property.IndicatorColor)
         self.indicator_color_ani.init(1/4, 0.01, self._indicator_color, self._indicator_color)
 
-    @pyqtProperty(QPointF)
+    @Property(QPointF)
     def indicatorPosition(self):
         return self._indicator_position
 
@@ -73,7 +73,7 @@ class SiTrendChart(QWidget):
         self._indicator_position = value
         self.update()
 
-    @pyqtProperty(QColor)
+    @Property(QColor)
     def indicatorColor(self):
         return self._indicator_color
 
